@@ -1,0 +1,352 @@
+*{
+  margin : 0;
+  padding : 0;
+  box-sizing :border-box;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+   
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  
+}
+
+.nav-links a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ffcc00;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.cart-icon img {
+  width: 20px;
+}
+
+.nav-cart{
+  padding: 5px;
+  font-size : 2rem;
+  margin-bottom: 25px;
+  width : 10px;
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.fnav{
+  text-align : center;
+  color : white;
+  margin-bottom : 650px;
+}
+
+
+.fa-cart-shopping {
+  font-size: 1.2rem;
+  margin-left: 400px;
+  
+}
+
+.cart-trolley--link {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;  
+ 
+}
+
+#categorySelect{
+  padding : 6px;
+  border-radius : 4px;
+  background-color :  #333;
+  color : white;
+  text-align : center;
+}
+
+/* ---------------search---------- */
+
+ 
+ 
+
+.search-container {
+  display: flex;
+  align-items: center;
+ 
+
+}
+
+#searchInput {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  width: 500px;
+}
+
+#searchButton {
+  background-color : red;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+#searchInput:focus, #searchButton:focus {
+  outline: none;
+}
+
+#searchButton:hover {
+  background-color: #0056b3;
+   
+}
+
+
+.nav-link {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  justify-content : center;
+  padding : 15px;
+  color : white;
+  background-color : #333;
+  cursor : pointer;
+   
+
+  
+}
+
+.nav-link a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link a:hover {
+  color: #ffcc00;
+}
+
+.nav-link a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ffcc00;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* -------------------language bar ------------- */
+.language-dropdown select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  width : 100px;
+  cursor: pointer;
+  background-image: url('flag-us.png'); /* Default flag */
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+.language-dropdown option {
+  background-image: none;
+  padding-left: 30px;
+}
+
+/* --------------card------------- */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 1, 0.6);
+  margin-bottom: 15px; 
+  cursor:pointer;
+}
+
+.product-card:hover{
+  box-shadow: 0 0 5px rgba(0, 0, 4, 5);
+  
+}
+
+.product-image img {
+  width: 50%;
+  margin: 25%;
+  
+}
+
+.product-details {
+  padding: 10px;
+}
+
+.product-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product-price {
+  margin: 5px;
+  font-size: 14px;
+}
+
+/* Media query for smaller screens */
+@media screen and (min-width: 768px) {
+  .product-list {
+    display: flex;
+    flex-wrap: wrap; /* Wrap products to next line if no space */
+    justify-content: space-between; /* Distribute products evenly */
+  }
+
+  .product-card {
+    flex-basis: calc(33.33% - 40px); /* Three products per row with 10px space in between */
+  
+  }
+}
+
+.coverimg {
+  height: 120vh;
+  background: url('https://img.freepik.com/free-photo/online-fashion-shopping-collage_23-2150535761.jpg?w=2000&t=st=1710512401~exp=1710513001~hmac=0c4b984642932dc29175c08c6e7c100f3d5c5b6c4f78fa6e83d0ef4ddd551d7e') center/cover; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+}
+
+
+.link {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  justify-content : center;
+  padding : 15px;
+  color : white;
+  cursor : pointer;
+}
+
+.cta-button{
+  background-color : #333;
+  color : #fff;
+  cursor:pointer;
+}
+
+.cta-button:hover{
+  background-color : #111;
+}
+
+#languageSelect{
+  width : 100px;
+  border-radius : 4px;
+  text-align : center;
+}
+
+.fa-shopping-cart{
+  margin-top : 15px;
+  
+   
+}
+
+.fa-user{
+  margin-top : 15px;
+  
+   
+}
+.fa-bars{
+  font-size : 250%;
+}
+ 
+
+.fa-magnifying-glass {
+  display: inline-block;
+  width: 30px; /* Set the width and height for the search icon */
+  height: 35px;
+  line-height: 30px; /* Center the icon vertically */
+  color: white; /* Set the color of the icon */
+  background-color: #e36c0b;/* Set the background color */
+  border-radius:0 5px 5px 0 ; /* Add border radius for rounded corners */
+  margin-top : 5px;
+  
+}
+
+.text{
+  text-align : center;
+  margin-bottom : 20px;
+   
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-link {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .product-image img {
+    width: 100%; /* Adjust image width to fit smaller screens */
+    margin: 0; /* Remove margin to center the image */
+  }
+  
+  .product-card {
+    width: 90%; /* Adjust card width to fit smaller screens */
+    margin: 0 auto; /* Center the card horizontally */
+  }
+
+  .coverimg {
+    height: 60vh; /* Adjust cover image height for smaller screens */
+  }
+}
